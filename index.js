@@ -3,13 +3,14 @@ module.exports = hrtime
 // polyfil for window.performance.now
 var performance = window.performance || {}
 var performanceNow =
-  performance.now.bind(performance)       ||
-  performance.now.bind(performance)       ||
-  performance.mozNow.bind(performance)    ||
-  performance.msNow.bind(performance)     ||
-  performance.oNow.bind(performance)      ||
-  performance.webkitNow.bind(performance) ||
+  performance.now        ||
+  performance.now        ||
+  performance.mozNow     ||
+  performance.msNow      ||
+  performance.oNow       ||
+  performance.webkitNow  ||
   function(){ return (new Date()).getTime() }
+performanceNow = performanceNow.bind(performance)
 
 // generate timestamp or delta
 // see http://nodejs.org/api/process.html#process_process_hrtime
