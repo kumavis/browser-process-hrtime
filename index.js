@@ -10,12 +10,11 @@ var performanceNow =
   performance.oNow       ||
   performance.webkitNow  ||
   function(){ return (new Date()).getTime() }
-performanceNow = performanceNow.bind(performance)
 
 // generate timestamp or delta
 // see http://nodejs.org/api/process.html#process_process_hrtime
 function hrtime(previousTimestamp){
-  var clocktime = performanceNow()/10e3
+  var clocktime = performanceNow.call(performance)/10e3
   var seconds = Math.floor(clocktime)
   var nanoseconds = (clocktime%1)*10e9
   if (previousTimestamp) {
