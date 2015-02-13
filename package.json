@@ -1,6 +1,6 @@
 {
   "name": "browser-process-hrtime",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shim for process.hrtime in the browser",
   "main": "index.js",
   "scripts": {
