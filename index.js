@@ -1,4 +1,4 @@
-module.exports = hrtime
+module.exports = process.hrtime || hrtime
 
 // polyfil for window.performance.now
 var performance = window.performance || {}
