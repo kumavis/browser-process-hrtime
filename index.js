@@ -1,9 +1,8 @@
 module.exports = process.hrtime || hrtime
 
 // polyfil for window.performance.now
-var performance = window.performance || {}
+var performance = global.performance || {}
 var performanceNow =
-  performance.now        ||
   performance.now        ||
   performance.mozNow     ||
   performance.msNow      ||
