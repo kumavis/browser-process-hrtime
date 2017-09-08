@@ -1,5 +1,7 @@
 # browser-process-hrtime
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kumavis/browser-process-hrtime.svg)](https://greenkeeper.io/)
+
 Browser shim for Node.js process.hrtime().
 See [documentation at nodejs.org](http://nodejs.org/api/process.html#process_process_hrtime)
 
