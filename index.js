@@ -1,4 +1,4 @@
-module.exports = process.hrtime || hrtime
+module.exports = (typeof process !== "undefined" && process.hrtime) || hrtime
 
 // polyfil for window.performance.now
 var performance = global.performance || {}
